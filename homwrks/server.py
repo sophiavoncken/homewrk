@@ -283,6 +283,11 @@ class HomewrksHandler(SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     init_db()
-    server = ThreadingHTTPServer(("127.0.0.1", 8060), HomewrksHandler)
-    print("Homewrks running at http://127.0.0.1:8060/")
+
+    PORT = int(os.environ.get("PORT", 10000))
+
+    server = ThreadingHTTPServer(("0.0.0.0", PORT), HomewrksHandler)
+
+    print(f"Server running on port {PORT}")
+
     server.serve_forever()
