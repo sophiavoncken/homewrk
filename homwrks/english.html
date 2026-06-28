@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homewrks - English</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="container app-shell">
+
+    <div class="lang-switch">
+        <button onclick="voltarHome()">← Home</button>
+        <button onclick="logout()">Sign out</button>
+    </div>
+
+    <p class="eyebrow">English A1</p>
+    <h1>Homewrks</h1>
+    <p class="student-line" id="studentLine"></p>
+
+    <div class="menu" id="menu">
+
+        <h2>Select an activity</h2>
+        <p class="intro">Practice one topic at a time. Each activity gives instant feedback and a final score.</p>
+
+        <button onclick="iniciar('wh')">WH Questions</button>
+        <button onclick="iniciar('verb')">Verb To Be</button>
+        <button onclick="iniciar('negative')">Negative Sentences</button>
+        <button onclick="iniciar('questions')">Questions with To Be</button>
+        <button onclick="iniciar('pronouns')">Pronouns</button>
+        <button onclick="iniciar('thisthat')">This / That</button>
+        <button onclick="iniciar('articles')">A / An / The</button>
+        <button onclick="iniciar('plurals')">Singular / Plural</button>
+
+    </div>
+
+    <div id="quiz" style="display:none;">
+
+        <div class="header">
+            <div>
+                <div class="title" id="tituloAtividade">Practice</div>
+                <div class="question-count" id="contador"></div>
+            </div>
+            <div class="score-pill" id="placar">0 correct</div>
+        </div>
+
+        <div class="progress">
+            <div id="barra"></div>
+        </div>
+
+        <h3 id="pergunta"></h3>
+        <div id="mediaBox"></div>
+
+        <div id="opcoes"></div>
+
+        <div class="nav-buttons">
+            <button onclick="anterior()">⬅ Back</button>
+            <button id="btn">Check</button>
+            <button id="nextBtn" onclick="proxima()">Next ➡</button>
+            <button id="restartBtn" onclick="reiniciar()">Restart</button>
+            <button onclick="voltarMenu()">Menu</button>
+        </div>
+
+        <p id="feedback"></p>
+
+    </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="atividades/ingles/a1/01-wh-questions.js"></script>
+<script src="atividades/ingles/a1/02-verb-to-be.js"></script>
+<script src="atividades/ingles/a1/03-negative-sentences.js"></script>
+<script src="atividades/ingles/a1/04-questions-with-to-be.js"></script>
+<script src="atividades/ingles/a1/05-pronouns.js"></script>
+<script src="atividades/ingles/a1/06-this-that.js"></script>
+<script src="atividades/ingles/a1/07-articles.js"></script>
+<script src="atividades/ingles/a1/08-plurals.js"></script>
+
+<script src="js/script.js"></script>
+
+<script>
+function voltarHome() {
+    window.location.href = "index.html"; 
+}
+</script>
+
+</body>
+</html>

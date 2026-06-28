@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homewrks - Español</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="container app-shell">
+
+    <div class="lang-switch">
+        <button onclick="voltarHome()">← Inicio</button>
+        <button onclick="logout()">Salir</button>
+    </div>
+
+    <p class="eyebrow">Español A1</p>
+    <h1>Homewrks</h1>
+    <p class="student-line" id="studentLine"></p>
+
+    <div class="menu" id="menu">
+        <h2>Elige una actividad</h2>
+        <p class="intro">Practica con ejercicios rápidos, audio, escritura y juegos de arrastrar.</p>
+
+        <button onclick="iniciar('saludos_es')">Saludos</button>
+        <button onclick="iniciar('ser_es')">Verbo ser</button>
+        <button onclick="iniciar('colores_es')">Colores</button>
+    </div>
+
+    <div id="quiz" style="display:none;">
+        <div class="header">
+            <div>
+                <div class="title" id="tituloAtividade">Práctica</div>
+                <div class="question-count" id="contador"></div>
+            </div>
+            <div class="score-pill" id="placar">0 correctas</div>
+        </div>
+
+        <div class="progress">
+            <div id="barra"></div>
+        </div>
+
+        <h3 id="pergunta"></h3>
+        <div id="mediaBox"></div>
+        <div id="opcoes"></div>
+
+        <div class="nav-buttons">
+            <button onclick="anterior()">⬅ Atrás</button>
+            <button id="btn">Verificar</button>
+            <button id="nextBtn" onclick="proxima()">Siguiente ➡</button>
+            <button id="restartBtn" onclick="reiniciar()">Reiniciar</button>
+            <button onclick="voltarMenu()">Menú</button>
+        </div>
+
+        <p id="feedback"></p>
+    </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="atividades/espanhol/a1/01-saludos.js"></script>
+<script src="atividades/espanhol/a1/02-ser.js"></script>
+<script src="atividades/espanhol/a1/03-colores.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+function voltarHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homewrks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="container home">
+
+    <p class="eyebrow">Language practice</p>
+    <h1>Homewrks</h1>
+    <p class="intro">Escolha um idioma e pratique com atividades rápidas, feedback imediato e progresso visível.</p>
+
+    <section class="auth-panel" id="authPanel">
+        <h2 id="authTitle">Entrar</h2>
+        <form class="auth-form" id="authForm">
+            <input id="nameField" name="name" type="text" placeholder="Nome do aluno">
+            <input name="email" type="email" placeholder="Email" required>
+            <input name="password" type="password" placeholder="Senha" minlength="6" required>
+            <button class="primary-action" id="authSubmit" type="submit">Entrar</button>
+        </form>
+        <button class="text-button" id="authToggle" type="button">Criar nova conta</button>
+        <p class="form-message" id="authMessage"></p>
+    </section>
+
+    <section id="appPanel" style="display:none;">
+        <div class="user-bar">
+            <span>Olá, <strong id="userName"></strong></span>
+            <button onclick="logout()">Sair</button>
+        </div>
+
+        <section class="language-grid" aria-label="Select language">
+        <button class="language-card" onclick="goEnglish()">
+            <span class="flag">🇺🇸</span>
+            <span>
+                <strong>English</strong>
+                <small>A1 grammar and vocabulary</small>
+            </span>
+        </button>
+
+        <button class="language-card" onclick="goFrench()">
+            <span class="flag">🇫🇷</span>
+            <span>
+                <strong>Français</strong>
+                <small>Grammaire et vocabulaire A1</small>
+            </span>
+        </button>
+
+        <button class="language-card" onclick="goSpanish()">
+            <span class="flag">🇪🇸</span>
+            <span>
+                <strong>Español</strong>
+                <small>Gramática y vocabulario A1</small>
+            </span>
+        </button>
+    </section>
+    </section>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script>
+function goEnglish() {
+    window.location.href = "english.html";
+}
+
+function goFrench() {
+    window.location.href = "french.html";
+}
+
+function goSpanish() {
+    window.location.href = "spanish.html";
+}
+</script>
+
+</body>
+</html>

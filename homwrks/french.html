@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homewrks - Français</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<main class="container app-shell">
+
+    <div class="lang-switch">
+        <button onclick="voltarHome()">← Accueil</button>
+        <button onclick="logout()">Sortir</button>
+    </div>
+
+    <p class="eyebrow">Français A1</p>
+    <h1>Homewrks</h1>
+    <p class="student-line" id="studentLine"></p>
+
+    <div class="menu" id="menu">
+
+        <h2>Choisissez une activité</h2>
+        <p class="intro">Travaillez un thème à la fois avec correction immédiate et score final.</p>
+
+        <button onclick="iniciar('verb_fr')">Verbe être</button>
+        <button onclick="iniciar('neg_fr')">Négation</button>
+        <button onclick="iniciar('q_fr')">Questions</button>
+        <button onclick="iniciar('articles_fr')">Articles définis / indéfinis</button>
+        <button onclick="iniciar('possessifs_fr')">Adjectifs possessifs</button>
+        <button onclick="iniciar('couleurs_fr')">Couleurs</button>
+
+    </div>
+
+    <div id="quiz" style="display:none;">
+
+        <div class="header">
+            <div>
+                <div class="title" id="tituloAtividade">Pratique</div>
+                <div class="question-count" id="contador"></div>
+            </div>
+            <div class="score-pill" id="placar">0 correct</div>
+        </div>
+
+        <div class="progress">
+            <div id="barra"></div>
+        </div>
+
+        <h3 id="pergunta"></h3>
+        <div id="mediaBox"></div>
+
+        <div id="opcoes"></div>
+
+        <div class="nav-buttons">
+            <button onclick="anterior()">⬅ Retour</button>
+            <button id="btn">Vérifier</button>
+            <button id="nextBtn" onclick="proxima()">Suivant ➡</button>
+            <button id="restartBtn" onclick="reiniciar()">Recommencer</button>
+            <button onclick="voltarMenu()">Menu</button>
+        </div>
+
+        <p id="feedback"></p>
+
+    </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="atividades/frances/a1/01-verbe-etre.js"></script>
+<script src="atividades/frances/a1/02-negation.js"></script>
+<script src="atividades/frances/a1/03-questions.js"></script>
+<script src="atividades/frances/a1/04-articles.js"></script>
+<script src="atividades/frances/a1/05-possessifs.js"></script>
+<script src="atividades/frances/a1/06-couleurs.js"></script>
+
+<script src="js/script.js"></script>
+
+<script>
+function voltarHome() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
